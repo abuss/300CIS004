@@ -19,6 +19,11 @@ int main(int argc, char *argv[])
   if (argc>1)
     n = atoi(argv[1]);
 
+  miVector<int> z = {2,5,3,77,8,1,3};
+  for(size_t i=0; i<z.size(); ++i)
+    std::cout << z[i] << " ";
+  std::cout << std::endl;
+
   miVector<int> w;
   w = crear<int>(n);
   

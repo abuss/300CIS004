@@ -35,6 +35,13 @@ struct miVector
   }
 #endif
 
+  // Initialization list constructor
+  miVector(const std::initializer_list<T>& init_list)
+    : m_data(new T[init_list.size()]), m_size(init_list.size())
+  {
+    std::copy(init_list.begin(), init_list.end(), m_data);
+  }
+
   // Assigment operator
   miVector& operator=(const miVector& other)
   {
@@ -69,6 +76,11 @@ struct miVector
   T& operator[](int i)
   {
     return m_data[i];
+  }
+
+  size_t size() const
+  {
+    return m_size;
   }
 
 private:
