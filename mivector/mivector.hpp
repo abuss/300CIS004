@@ -7,6 +7,11 @@
 template <typename T>
 struct miVector
 {
+  typedef T*              iterator;
+  typedef const iterator  const_iterator;
+  typedef T               value_type;
+  typedef T&              reference;
+
   // Default constructor
   miVector() { }
 
@@ -73,7 +78,7 @@ struct miVector
       delete [] m_data;
   }
 
-  T& operator[](int i)
+  reference operator[](int i)
   {
     return m_data[i];
   }
@@ -81,6 +86,26 @@ struct miVector
   size_t size() const
   {
     return m_size;
+  }
+
+  iterator begin()
+  {
+    return m_data;
+  }
+
+  iterator end()
+  {
+    return m_data+m_size;
+  }
+
+  const_iterator begin() const
+  {
+    return m_data;
+  }
+
+  const_iterator end() const
+  {
+    return m_data+m_size;
   }
 
 private:
