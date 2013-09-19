@@ -1,0 +1,11 @@
+To Compile:
+
+make guess-v5  # Console version
+
+make guess.cgi  # CGI version
+
+
+To use tha CGI version yoou need a Web server configurated to support cgi and 
+put the file in a directory with permissions to execute CGIs
+
+
