@@ -1,0 +1,13 @@
+Para compilar el ejemplo se requiere QT version 5.x
+
+El archivo de configuración block.pro puede ser editado para cambiar
+el compilador a usar (por defecto usa clang++)
+
+Para generar el Makefile ejecutar:
+
+  qmake
+
+Para compilar luego de crear el Makefile, ejecutar:
+
+  make
+
