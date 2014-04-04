@@ -15,8 +15,17 @@ main-op : persona.cc main.cc
 static : static.cc
 	${CC} -o static static.cc
 
+herencia: herencia.cc
+	${CC} -o herencia herencia.cc
+
+herencia2: herencia2.cc
+	${CC} -o herencia2 herencia2.cc
+
 demo-static : demo-static.cc
 	${CC} -o demo-static demo-static.cc
+
+herencia3: herencia3.cc
+	${CC} -o herencia3 herencia3.cc
 
 clean :
 	rm persona.o main main-op static demo-static
